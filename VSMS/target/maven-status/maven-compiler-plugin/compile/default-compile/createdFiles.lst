@@ -1,0 +1,9 @@
+com\mycompany\testwithmaven\App.class
+com\mycompany\testwithmaven\Customer.class
+com\mycompany\testwithmaven\Service.class
+com\mycompany\testwithmaven\Vehicle.class
+module-info.class
+com\mycompany\testwithmaven\Model.class
+com\mycompany\testwithmaven\IQuery.class
+com\mycompany\testwithmaven\GUIController.class
+com\mycompany\testwithmaven\ModelAssistant.class

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.testwithmaven.GUIController">
+   <children>
+      <Label fx:id="vsmslabel" layoutX="255.0" layoutY="-1.0" prefHeight="35.0" prefWidth="422.0" text="Vehicle Service Management System" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ListView fx:id="customerListView" layoutX="6.0" layoutY="288.0" onMouseClicked="#populateUserData" prefHeight="206.0" prefWidth="302.0" />
+      <ListView fx:id="vehicleListView" layoutX="318.0" layoutY="288.0" prefHeight="206.0" prefWidth="220.0" />
+      <ListView fx:id="serviceListView" layoutX="548.0" layoutY="287.0" onMouseClicked="#serviceCancelled" prefHeight="206.0" prefWidth="346.0" />
+      <Button fx:id="addCustomerBtn" layoutX="22.0" layoutY="189.0" mnemonicParsing="false" onAction="#addCustomerBtnHandler" prefHeight="25.0" prefWidth="74.0" text="ADD" />
+      <Button fx:id="displayAllCustomersButton" layoutX="107.0" layoutY="188.0" mnemonicParsing="false" onAction="#displayAllCustomersButtonHnadler" prefHeight="26.0" prefWidth="91.0" text="DISPLAY ALL" />
+      <Button fx:id="updateCustomerBtn" layoutX="212.0" layoutY="189.0" mnemonicParsing="false" onAction="#updateCustomerBtnHandler" prefHeight="25.0" prefWidth="74.0" text="UPDATE" />
+      <Button fx:id="searchCustomerBtn" layoutX="230.0" layoutY="248.0" mnemonicParsing="false" onAction="#searchCustomerBtnHandler" prefHeight="25.0" prefWidth="74.0" text="SEARCH" />
+      <Label fx:id="customersLabel" alignment="CENTER" layoutX="6.0" layoutY="36.0" prefHeight="26.0" prefWidth="299.0" style="-fx-background-color: blue;" text="CUSTOMERS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="vehicleLabel" alignment="CENTER" layoutX="328.0" layoutY="36.0" prefHeight="26.0" prefWidth="206.0" style="-fx-background-color: aquamarine;" text="VEHICLE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="servicingLabel" alignment="CENTER" layoutX="555.0" layoutY="36.0" prefHeight="26.0" prefWidth="338.0" style="-fx-background-color: aqua;" text="SERVICING">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="addVehicleBtn" layoutX="332.0" layoutY="249.0" mnemonicParsing="false" onAction="#addVehicleBtnHandler" prefHeight="26.0" prefWidth="83.0" text="ADD" />
+      <Button fx:id="diaplayAllVehiclesBtn" layoutX="441.0" layoutY="248.0" mnemonicParsing="false" onAction="#diaplayAllVehiclesBtnHandler" prefHeight="26.0" prefWidth="83.0" text="DISPLAY ALL" />
+      <Button fx:id="addServiceBtn" layoutX="631.0" layoutY="172.0" mnemonicParsing="false" onAction="#addServiceBtnHandler" prefHeight="25.0" prefWidth="74.0" text="ADD" />
+      <Button fx:id="cancelServiceBtn" layoutX="749.0" layoutY="172.0" mnemonicParsing="false" onAction="#cancelServiceBtnHandler" prefHeight="25.0" prefWidth="74.0" text="CANCEL" />
+      <Button fx:id="viewStatisticsBtn" layoutX="732.0" layoutY="202.0" mnemonicParsing="false" onAction="#viewStatisticsBtnHandler" prefHeight="26.0" prefWidth="142.0" text="VIEW STATISTICS" />
+      <Label layoutX="24.0" layoutY="71.0" text="First Name:" />
+      <Label layoutX="24.0" layoutY="100.0" text="Last Name:" />
+      <Label layoutX="24.0" layoutY="129.0" text="Address:" />
+      <Label layoutX="24.0" layoutY="156.0" text="Phone:" />
+      <Label layoutX="332.0" layoutY="70.0" text="Customer ID:" />
+      <Label layoutX="332.0" layoutY="101.0" text="Rego Number:" />
+      <Label layoutX="332.0" layoutY="127.0" text="Make" />
+      <Label layoutX="332.0" layoutY="155.0" text="Model:" />
+      <Label layoutX="332.0" layoutY="185.0" text="Year Manufactured:" />
+      <Label layoutX="332.0" layoutY="212.0" text="Odometer KMs:" />
+      <TextField fx:id="firstNameTextField" layoutX="99.0" layoutY="68.0" promptText="e.g. Alicia" />
+      <TextField fx:id="lastNameTextField" layoutX="99.0" layoutY="96.0" prefHeight="26.0" prefWidth="150.0" promptText="e.g. Sortwell" />
+      <TextField fx:id="addressTextField" layoutX="98.0" layoutY="124.0" prefHeight="26.0" prefWidth="188.0" promptText="e.g. 7 Smith Lane Dundas Valley" />
+      <TextField fx:id="phoneTextField" layoutX="98.0" layoutY="152.0" prefHeight="26.0" prefWidth="188.0" promptText="e.g. 0400000000" />
+      <TextField fx:id="searchCustomerTextField" layoutX="8.0" layoutY="248.0" prefHeight="26.0" prefWidth="216.0" promptText="Search by last name or phone" />
+      <TextField fx:id="regoTextField" layoutX="422.0" layoutY="95.0" prefHeight="26.0" prefWidth="104.0" promptText="e.g. BCW65J" />
+      <TextField fx:id="brandTextField" layoutX="422.0" layoutY="123.0" prefHeight="26.0" prefWidth="104.0" promptText="e.g. Toyota" />
+      <TextField fx:id="modelTextField" layoutX="422.0" layoutY="151.0" prefHeight="26.0" prefWidth="104.0" promptText="e.g. Camry" />
+      <TextField fx:id="yearManuTextField" layoutX="447.0" layoutY="180.0" prefHeight="26.0" prefWidth="78.0" promptText="e.g. 2015" />
+      <TextField fx:id="mileageTextArea" layoutX="447.0" layoutY="208.0" prefHeight="26.0" prefWidth="78.0" promptText="e.g. 600000" />
+      <Label layoutX="552.0" layoutY="72.0" text="Vehicle ID" />
+      <ChoiceBox fx:id="serviceVehicleIDChoice" layoutX="648.0" layoutY="65.0" prefHeight="26.0" prefWidth="104.0" />
+      <ChoiceBox fx:id="customerChoiceVehicle" layoutX="412.0" layoutY="66.0" prefHeight="26.0" prefWidth="113.0" />
+      <Label layoutX="554.0" layoutY="103.0" text="Type of Service:" />
+      <Button fx:id="listAllServicesBtn" layoutX="572.0" layoutY="202.0" mnemonicParsing="false" onAction="#listAllServicesBtnHandler" prefHeight="26.0" prefWidth="150.0" text="LIST ALL SERVICES" />
+      <Label layoutX="553.0" layoutY="139.0" text="Date:" />
+      <DatePicker fx:id="dateServicePicker" layoutX="591.0" layoutY="133.0" prefHeight="26.0" prefWidth="130.0" promptText="Select date" />
+      <Label layoutX="753.0" layoutY="136.0" text="Price:" />
+      <TextField fx:id="serviceTypeTextField" layoutX="648.0" layoutY="99.0" prefHeight="26.0" prefWidth="237.0" promptText="e.g. Regular Service + Tyre Change x 4" />
+      <TextField fx:id="priceTextField" layoutX="792.0" layoutY="133.0" prefHeight="26.0" prefWidth="91.0" promptText="e.g. $600" />
+      <Button fx:id="searchServiceBtn" layoutX="805.0" layoutY="249.0" mnemonicParsing="false" onAction="#searchServiceBtnHandler" prefHeight="25.0" prefWidth="74.0" text="SEARCH" />
+      <TextField fx:id="searchServiceTextField" layoutX="583.0" layoutY="249.0" prefHeight="26.0" prefWidth="216.0" promptText="Search service by rego number" />
+      <Button fx:id="exitButton" layoutX="394.0" layoutY="512.0" mnemonicParsing="false" onAction="#exitButtonHandler" prefHeight="25.0" prefWidth="74.0" text="EXIT" />
+      <Button fx:id="resetServiceAreaData" layoutX="680.0" layoutY="511.0" mnemonicParsing="false" onAction="#resetServiceAreaDataHandler" prefHeight="26.0" prefWidth="74.0" text="RESET" />
+   </children>
+</AnchorPane>
